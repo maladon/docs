@@ -4,7 +4,7 @@ This portion of the tutorial with help you get your BeagleBone Green Wireless co
 
 # Requirements
 
-## Hardware Setup (If using the simulator, you can skip this step.)
+## Hardware Setup
 
 ### SeeedStudio BeagleBone Green Wireless
 
@@ -28,14 +28,14 @@ The BBG comes standard with a useful set of software that will enable you to rap
 
 * Node-RED ([http://nodered.org/](http://nodered.org/))
 
-### Gateway Engine with GMQ (If using the BeagleBone Green, you can skip this step.)
+### Gateway Engine with GMQ
 
 ExositeReady™ Gateway Engine (GWE) is a Python-based application framework that runs on embedded Linux gateway devices. GWE makes it easy to connect devices to a gateway and write applications on that gateway to interact with Exosite web services, including the Murano platform, Murano Edge, or both.
 
 In this example you will use GWE to allow sensors to communicate with the Murano platform. Installation instructions are provided in a later section.
 
 ```
-Gateway Engine will be used to provision, or activate your physical hardware. If you intend on using the simulator you will not need to install GWE.
+Gateway Engine will be used to provision, or activate your physical hardware.
 ```
 # BeagleBone Setup
 
@@ -178,15 +178,13 @@ Now you will add your device to your product in Murano
 
    ![image alt text](../assets/new_device_popup.png)
 
-5. Add a device with a Name and Identity. The Name can be any string to help remember which device it is. The Identity should either be the MAC address of your BBG, or if you are using the simulator, you can use `00001` for the purpose of testing.
+5. Add a device with a Name and Identity. The Name can be any string to help remember which device it is. The Identity should either be the MAC address of your BBG.
 
 ## Enable Serial Number which is the MAC Address of the Device
 
-At this point, you will need to activate your device by either executing a command in GWE, or running the simulator code.
+At this point, you will need to activate your device by executing a command in GWE.
 
 ### GWE Activation
-
-**Note:** Run this step only if you are using a BBG.
 
 The steps to activate your BBG using GWE can be found here:
 [http://docs.exosite.com/gwe/getting_started/](http://docs.exosite.com/gwe/getting_started/)
