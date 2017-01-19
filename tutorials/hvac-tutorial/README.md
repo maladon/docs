@@ -201,17 +201,44 @@ $ murano product spec push --file spec/product-spec.yaml
 ```
 This command sets up all of the data aliases that we will use in this example. You can now see them by going to [https://www.exosite.io/business/products](https://www.exosite.io/business/products) and clicking the 'Definition' tab. Many of the aliases are used by Gateway Engine. Notice the aliases like 'ambient_temperature', 'desired_temperature', and 'heat_on'. These are all the different resources that will used for this HVAC tutorial. 
 
-## Link Product to Solution
+## Connect Product to Solution
+
+Next, you will need to link your product with your solution. Linking allows your solution and product to communicate with one another.
 
 ### Web UI
 
+1. In your Murano solution, click on the *SERVICES* tab. 
+
+2. Select *Product*.
+
+3. Select the settings icon. 
+
+4. Select the product(s) you want to include in the solution. 
+
+5. Click "APPLY".
+
+   ![solutions services](assets/solutions_services.png)
+
 ### Murano CLI
 
+To connect a product with a solution using the Murano CLI:
 
+```sh
+$ murano assign set <product>
+```
 
+## Sync Your Solution
+
+Before moving on to hardware, all of the configuration needs to be synced up to Murano.
+
+```sh
+$ murano sync up --all
+```
+
+At this point your product and solution is configured and ready to start receiving data from your hardware of choice or the simulator.
 
 ## Next Steps
 
-At this point your product is configured and ready to start receiving data from your hardware of choice or the simulator.
+If you have hardware available, you can walk through installing required software on your hardware, connecting the hardware and its sensors to the Murano platform, and connecting the sensor data to a Murano solution.
 
-If you have BBG hardware available, you will walk through installing GWE on the BBG, connecting the BBG and its sensors to the Murano platform, and connecting the sensor data to a Murano solution. If you do not have hardware available, you will walk through running the simulator. This should provide you with an easy starting point for connecting devices and creating solutions to visualize and interpret your device's data.
+If you do not have hardware available, you can walk through running the simulator. This should provide you with an easy starting point for connecting devices and creating solutions to visualize and interpret your device's data.
