@@ -232,7 +232,13 @@ $ murano assign set <product>
 Before moving on to hardware, all of the configuration needs to be synced up to Murano.
 
 ```sh
-$ murano sync up --all
+$ murano syncup --all
+```
+
+```
+What is happening when you sync code?
+
+Murano CLI looks at the directory structure of your local repository and syncs the appropriate files and configurations directly to your solution in Murano. Endpoints, event handles, static files, and modules are synced. If you make changes locally, a syncup command will ensure Murano matches your local changes. If you make changes using the Murano interface, a syncdown will ensure your local repository matches Murano.
 ```
 
 At this point your product and solution is configured and ready to start receiving data from your hardware of choice or the simulator.
@@ -241,4 +247,8 @@ At this point your product and solution is configured and ready to start receivi
 
 If you have hardware available, you can walk through installing required software on your hardware, connecting the hardware and its sensors to the Murano platform, and connecting the sensor data to a Murano solution.
 
+[BeagleBone Green Wireless](beaglebone.md)
+
 If you do not have hardware available, you can walk through running the simulator. This should provide you with an easy starting point for connecting devices and creating solutions to visualize and interpret your device's data.
+
+[Python Simulator](simulator.md)
