@@ -1,6 +1,6 @@
 ---
 title: Contributing Guide
-template: two-column
+template: default
 ---
 
 # Contributing to Exosite's Documentation
@@ -38,15 +38,14 @@ like:
 
 ```
 ---
-title: UDP Single Shot
-template: two-column
+title: Introduction
+template: default
 ---
 ```
 
 There are two variables that are currently supported. `title` is used to set the
 HTML title tag in the template. `template` is used to set the HTML template that
-is used, it can either be set to "two-column" or "default" (which is the
-default).
+is used, it can be "default" (which is the default).
 
 Frontmatter is optional.
 
