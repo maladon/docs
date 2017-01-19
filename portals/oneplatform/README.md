@@ -13,7 +13,7 @@ template: default
 
 
 # Tutorials
-* [Introduction To Device Connectivity and One Platform ](/introduction) - Start at the basics of device connectivity to Exosite's Platform
+* [Introduction To Device Connectivity and One Platform ](/portals/introduction) - Start at the basics of device connectivity to Exosite's Platform
 * [Getting Started with Portals Evaluation Web Dashboard Tool](../portals/tutorials/get-started) - Using a free account, get a device added and start sending data
 * [Getting Started using an Arduino YÚN](../portals/tutorials/get-started-arduinoyun/) - Get a device added and start sending data
 * [Videos](../videos) - Video tutorials covering various topics
@@ -41,7 +41,7 @@ Portals is a whitelabel dashboard based web application framework that is used f
 * [Portals Whitelabel Domain Solution Administration Reference Articles (link)](https://support.exosite.com/hc/en-us/sections/200054894)
 ## API
 * [Portals Custom Widget API](../widget/) - a Javascript API for creating custom Portals dashboard widgets
-* [Portals API](../portals/) - an API for interacting with the Portals application
+* [Portals API](../portals/portalsapi/) - an API for interacting with the Portals application
 
 
 
@@ -341,7 +341,7 @@ The messages for dispatches may either take the value passed into the dispatch (
 ## Lua Scripts
 The most powerful of the resources available in the platform clients are [Lua](http://www.lua.org/manual/5.2/) Scripts.  The scripts have access to all of the other resources for that client, including any child clients.  This allows developers to processing incoming data into the dataports, trigger actions or alerts, and manage resources based on the state of different data and time.  
 
-[One Platform Lua Scripting Reference Guide](/scripting)
+[One Platform Lua Scripting Reference Guide](/portals/scripting)
 
 ``` lua
 local input = alias['input']

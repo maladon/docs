@@ -1,6 +1,6 @@
-# Getting-started Guide: Simulate a Connected Lightbulb Using a Python Script
+# Lightbulb Quickstart
 
-In this guide, you will use a Python script to simulate a connected lightbulb. You will then create a development dashboard within Murano, where you can see temperature and humidity data from the device and have the ability to remotely turn the lightbulb on and off.
+In this quickstart you will use a Python script to simulate a connected lightbulb. You will then create a development dashboard within Murano where you can see temperature and humidity data from the device and have the ability to remotely turn the lightbulb on and off.
 
 # Requirements
 
