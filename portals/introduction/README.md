@@ -1,6 +1,6 @@
 ---
 title: Introduction to Device Connectivity
-template: default
+template: portals
 ---
 # Introduction to Device Connectivity
 
