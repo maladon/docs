@@ -2,13 +2,14 @@
 title: HVAC Reference Application Tutorial
 template: default
 ---
+# HVAC Reference Application Tutorial
 
 This HVAC Reference Application is an interactive tutorial that allows users to learn the core features of Murano from both a hardware and software perspective. You will have the option to prototype or simulate the implementation of an HVAC monitoring system with simple controls using the Murano platform.
 
 # Requirements
 This tutorial is designed to be flexible based the hardware, software, and tools you have available. If you have one of the supported hardware items, you will be able to create a full IoT solution with working hardware. If you do not have any of the supported hardware available, we have created a Python based simulator that will help you get started.
 
-## Hardware
+## Supported Hardware
 
 ### SeeedStudio BeagleBone Green Wireless
 
@@ -68,7 +69,7 @@ To continue this tutorial, you'll need to open your terminal.
 Murano CLI is the command-line tool that interacts with Murano and makes tasks easier. Murano CLI makes it simple to deploy code to a solution, import many product definitions at once, set up endpoints and APIs, and more. 
 ```
 
-Murano CLI is a Ruby based command-line interface. Murano CLI will be used to for most actions throughout the rest of this tutorial.
+Murano CLI is a Ruby based command-line interface. Murano CLI will be used for most actions throughout the rest of this tutorial.
 
 Ruby is most likely already installed on your system. Check to see if Ruby is installed first by opening up a terminal window and typing the following command.  
 
@@ -78,7 +79,7 @@ Ruby is most likely already installed on your system. Check to see if Ruby is in
 $ which gem
 ```
 
-If you see `/usr/bin/gem`, then Ruby is already installed. 
+If you see something like `/usr/bin/gem`, then Ruby is already installed. 
 
 ```
 If you do not have Ruby installed, the official Ruby docs will help you get it installed:
@@ -95,15 +96,17 @@ If prompted, please enter your local computer password.
 
 ## Download the HVAC code
 
-This tutorial uses a common codebase that includes a web application and specifications for the hardware. The code has been written to be flexible and works with multiple hardware platforms, and the simulator.
+This tutorial uses a common codebase that includes a web application and specifications for the hardware. The code has been written to be flexible and works with multiple hardware platforms or the Python simulator.
 
 [https://www.github.com/exosite/hvac-reference-app/release/link.zip](https://www.github.com/exosite/hvac-reference-app/release/link.zip)
 
 ## Create a Solution
 
+Next you need a place to deploy HVAC solution code. 
+
 ### Web UI
 
-Next you need a place to deploy the BBG HVAC solution code. 
+To create a solution using the Web UI:
 
 1. From the *Solutions* tab (https://www.exosite.io/business/solutions), click "+ NEW SOLUTION." 
 
@@ -125,9 +128,13 @@ Once you have created a solution, you will need to find the Solution ID.
 
 ### Murano CLI
 
+To create a solution using the Murano CLI:
+
 ```sh
 $ murano solution create <name>
 ```
+
+This command will return the ID of your solution for the next step.
 
 ### Configure Your Solution
 
@@ -143,7 +150,7 @@ Next, you will need to create a product. The product you create is the virtual r
 
 ### Web UI
 
-To create a new product using the UI:
+To create a new product using the Web UI:
 
 1. Navigate to the following URL: 
    [https://www.exosite.io/business/products](https://www.exosite.io/business/products)
@@ -158,15 +165,6 @@ To create a new product using the UI:
 
    ![new product](assets/new_product_popup.png)
 
-
-### Murano CLI
-
-```sh
-$ murano product create <name>
-```
-
-## Configure Your Product
-
 Before continuing you will need to find the ID of the product you created.
 
 1. In Murano select *Products*.
@@ -177,23 +175,33 @@ Before continuing you will need to find the ID of the product you created.
 
    ![product id](assets/product_id.png)
 
+
+### Murano CLI
+
+To create a new production using the Murano CLI:
+
+```sh
+$ murano product create <name>
+```
+
+This command will return the ID of your product for the next step.
+
+## Configure Your Product
+
 To configure your product you can use the config command of the Murano CLI tool. This command tells Murano CLI which product to use. 
 
 ```sh
 $ murano config product.id <productid>
 ```
 
-Executing the command below will set the product definition for this example as defined in the `beaglebone-hvac-spec.yaml` file. 
+Executing the command below will set the product definition for this example as defined in the `product-spec.yaml` file. 
 
 ```
-$ murano product spec push --file spec/beaglebone-hvac-spec.yaml 
+$ murano product spec push --file spec/product-spec.yaml 
 ```
-This command sets up all of the data aliases that we will use in this example. You can now see them by going to [https://www.exosite.io/business/products](https://www.exosite.io/business/products) and clicking the 'Definition' tab. Many of the aliases are used by Gateway Engine which will be covered later. Notice the aliases like 'ambient_temperature', 'desired_temperature', and 'heat_on'. These are all the different dataports that will used for this HVAC example. 
-
-At this point your product is configured and ready to start receiving data from the BBG or the simulator.
+This command sets up all of the data aliases that we will use in this example. You can now see them by going to [https://www.exosite.io/business/products](https://www.exosite.io/business/products) and clicking the 'Definition' tab. Many of the aliases are used by Gateway Engine. Notice the aliases like 'ambient_temperature', 'desired_temperature', and 'heat_on'. These are all the different resources that will used for this HVAC tutorial. 
 
 ## Link Product to Solution
-
 
 ### Web UI
 
@@ -203,5 +211,7 @@ At this point your product is configured and ready to start receiving data from 
 
 
 ## Next Steps
+
+At this point your product is configured and ready to start receiving data from your hardware of choice or the simulator.
 
 If you have BBG hardware available, you will walk through installing GWE on the BBG, connecting the BBG and its sensors to the Murano platform, and connecting the sensor data to a Murano solution. If you do not have hardware available, you will walk through running the simulator. This should provide you with an easy starting point for connecting devices and creating solutions to visualize and interpret your device's data.
