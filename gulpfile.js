@@ -12,6 +12,7 @@ var gulp = require('gulp'),
   exec = require('child_process').exec;
 
 var defaultTemplate = new Buffer(fs.readFileSync("_static/_layouts/default.html"));
+var portalsTemplate = new Buffer(fs.readFileSync("_static/_layouts/portals.html"));
 
 var site_search_index = [];
 
@@ -148,7 +149,11 @@ gulp.task('md', ['fetch-svc-docs'], function() {
 
       try {
         content.attributes.body = marked(body);
-        file.contents = defaultTemplate;
+        if (content.attributes.template == "portals") {
+            file.contents = portalsTemplate;
+        } else {
+            file.contents = defaultTemplate;
+        }
 
         var tokens = marked.lexer(body);
         add_chain_to_headings(tokens);

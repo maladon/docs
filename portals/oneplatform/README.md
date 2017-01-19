@@ -1,6 +1,6 @@
 ---
 title: One Platform
-template: default
+template: portals
 ---
 
 # One Platform Guide

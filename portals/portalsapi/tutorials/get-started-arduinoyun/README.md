@@ -1,5 +1,5 @@
 ---
-template: default
+template: portals
 ---
 
 # Get Started with Arduino Yún and Exosite
