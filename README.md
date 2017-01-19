@@ -1,21 +1,25 @@
-# Murano Overview
+# Murano Documentation
 
-Murano provides a powerful IoT platform that helps organizations connect product deployments and build applications and services using secure, scalable infrastructure. 
+Welcome to Murano, Exosite's enterprise IoT software platform. Use this documentation site to familiarize yourself with Exosite's products and explore the many features available to you through Murano.
 
 <a class="btn orange" href="https://exosite.com/business/signup">Murano Signup</a>
 <a class="btn orange" href="/murano/get-started">Murano Getting-Started Guides</a>
 
 ![murano overview image](/murano/assets/platform_overview.png)
 
-# Overview
+# Murano Overview
 
-The easiest way to think about the Murano platform is as a number of cloud software layers that are integrated together, simplifying the full IoT stack. Murano has taken care of the infrastructure, development, and integration of the functional layers, including device connectivity, device/product management, data routing, service integration (with services like data stores, alerting, and third-party analytics platforms), application public APIs, user auth/roles/permissions, and application asset hosting. 
+Murano helps organizations connect product deployments and build applications and services using a secure, scalable infrastructure. The easiest way to think about the Murano platform is as a number of cloud software layers that are integrated together, simplifying the full IoT stack. Murano has taken care of the infrastructure, development, and integration of the functional layers, including device connectivity, device/product management, data routing, service integration (with services like data stores, alerting, and third-party analytics platforms), application public APIs, user auth/roles/permissions, and application asset hosting. 
 
 Murano also allows integration with third-party software, allowing developers to focus on user-application-specific functionality and device applications, while achieving a faster time to market than would be possible if building a platform from scratch. 
 
 Murano allows developers to build full IoT systems quickly, while maintaining the flexibility to add new features and build customizations not possible on more rigid platforms. 
 
 # Murano Features
+
+## Businesses
+
+The Business concept in Murano is a virtual space that houses all the products and solutions created by your organization. A Business does not necessarily have to be a real-life company. A business could be a development or testing space for trying out new innovations. The business page is the place to manage your account, user access, products, solutions, billing and payments, and more.
 
 ## Products
 
@@ -25,6 +29,10 @@ The Product concept in Murano represents a connected device type. It provides to
 
 The Solution concept in Murano represents the application logic, user interfaces, and APIs for an IoT application. It provides the tools needed to build and deploy applications and services on top of IoT device data using concepts of data routing, integrated services, custom APIs, user auth/roles/permissions, and application asset hosting. This allows developers to create solution templates that contain the entire application functionality to deploy to end users or to provide a custom API for their products.
 
-# Help
+# Need Help?
 
-Have additional questions? Check out the [Exosite support site](https://support.exosite.com/hc/).
+- [Support Services](https://support.exosite.com/hc/)
+- [Professional Services](https://exosite.com/services/professional-services/)
+- [Community Forum](https://community.exosite.com/)
+
+
