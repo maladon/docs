@@ -42,7 +42,7 @@ For more information on the CoAP protocol see [RFC7252](https://tools.ietf.org/h
 
 [Timestamp](#timestamp) - get the current unix timestamp
 
-[Remote Procedure Call Proxy](#remote-procedure-call-proxy) - proxy CBOR-RPC calls to the [JSON-RPC](/rpc) API
+[Remote Procedure Call Proxy](#remote-procedure-call-proxy) - proxy CBOR-RPC calls to the [JSON-RPC](/portals/rpc) API
 
 ## Libraries and Sample Code
 

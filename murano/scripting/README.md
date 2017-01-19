@@ -22,7 +22,7 @@ Scripts are written in Lua, on the LuaJIT VM, which is Lua 5.1 with [some 5.2 fe
 For general information about Lua 5.1, please refer to the [online Lua manual](http://www.lua.org/manual/5.1/).
 
 Scripts may be added to a Solution by using either the [Murano admin UI](https://www.exosite.com/business/solutions) or by
-using the [Exosite Command Line Interface](../exosite-cli/).
+using the [Exosite Command Line Interface](../../development/tools/exosite-cli/).
 
 
 ### Examples
@@ -72,7 +72,7 @@ Those events will trigger the execution of one or more **event_handler script(s)
 in your solution. One **event_handler script** always targets a single [Murano services](../services) event.
 
 On the [Murano Portal](https://www.exosite.com/business/solutions) you can define event script under the Solutions *Services* tab.
-If you are using the [Exosite client tool](../exosite-cli/), you can define the event script in the
+If you are using the [Exosite client tool](../../development/tools/exosite-cli/), you can define the event script in the
 [event_handler folder](https://github.com/exosite/home-automation-example/tree/master/event_handler) of your project
 by using the service _Alias_ as the file name.
 

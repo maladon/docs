@@ -6,13 +6,13 @@ title: WebSocket
 
 ## WebSocket Protocol
 
-The WebSocket protocol provides a mean to establish a connection to One Platform and send multiple RPC requests in the same session. It matches the calls defined in the JSON RPC API [RPC](../rpc/README.md) with the addition of [subscribe](#subscribe) and [unsubscribe](#unsubscribe) which are detailed here. 
+The WebSocket protocol provides a mean to establish a connection to One Platform and send multiple RPC requests in the same session. It matches the calls defined in the JSON RPC API [RPC](../portals/rpc/README.md) with the addition of [subscribe](#subscribe) and [unsubscribe](#unsubscribe) which are detailed here. 
 
-Also authentication differs from the JSON RPC API [RPC](../rpc/README.md). In the WebSocket implementation, we do authentication only once per session, but can issue multiple RPC calls asynchronous during the session.
+Also authentication differs from the JSON RPC API [RPC](../portals/rpc/README.md). In the WebSocket implementation, we do authentication only once per session, but can issue multiple RPC calls asynchronous during the session.
 
 ## First Step: Establishing a Connection
 
-You have to establish WebSocket connection to `wss://m2.exosite.com/ws`.  The first step is to do authentication with One Platform where you have to send an authentication JSON object [authentication](../rpc/README.md#authentication).  Here's an example:
+You have to establish WebSocket connection to `wss://m2.exosite.com/ws`.  The first step is to do authentication with One Platform where you have to send an authentication JSON object [authentication](../portals/rpc/README.md#authentication).  Here's an example:
 
 ```
 {

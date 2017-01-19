@@ -9,10 +9,10 @@ Exosite's most basic concept is to make internet connected physical things usefu
 [Exosite Device Software - Libraries, Examples, SDKs](../exositeready)
 
 ## Basic Device Communication
-The first goal of device connectivity is to have the device interact with Exosite's [One Platform](/oneplatform), which provides a virtual representation of that thing in the cloud.  The most common way for devices to interact is via Exosite's [HTTP Device API](/http) (Application Programming Interface).  Using this API, a standard message would like the following, which is in <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" target="_blank">HTTP</a> format.  We will pick it a part here to help give some context to the Exosite [One Platform](/oneplatform) which it is communicating to.
+The first goal of device connectivity is to have the device interact with Exosite's [One Platform](/oneplatform), which provides a virtual representation of that thing in the cloud.  The most common way for devices to interact is via Exosite's [HTTP Device API](/portals/http) (Application Programming Interface).  Using this API, a standard message would like the following, which is in <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" target="_blank">HTTP</a> format.  We will pick it a part here to help give some context to the Exosite [One Platform](/oneplatform) which it is communicating to.
 
 * [One Platform Reference](/oneplatform)
-* [HTTP Device API](/http)
+* [HTTP Device API](/portals/http)
 
 ```
 POST /onep:v1/stack/alias HTTP/1.1
@@ -29,13 +29,13 @@ Most of this syntax from this message is standard to the HTTP format.  There are
 ```
 Host: m2.exosite.com
 ```
-The device is communicating with Exosite's [HTTP Data API](/http), which can be found at this address: m2.exosite.com.  (Note: This is an API, you can not ping this address).  Want to quick try out the API - the current unix timestamp is hosted (without auth) at this address: [https://m2.exosite.com/timestamp](https://m2.exosite.com/timestamp)
+The device is communicating with Exosite's [HTTP Data API](/portals/http), which can be found at this address: m2.exosite.com.  (Note: This is an API, you can not ping this address).  Want to quick try out the API - the current unix timestamp is hosted (without auth) at this address: [https://m2.exosite.com/timestamp](https://m2.exosite.com/timestamp)
 
 ```
 /onep:v1/stack/alias
 ```
 
-This is the URL for the Exosite [HTTP Data API](/http).  In this case, we are writing data to an alias that represents the piece of data in the platform, otherwise known as a dataport.
+This is the URL for the Exosite [HTTP Data API](/portals/http).  In this case, we are writing data to an alias that represents the piece of data in the platform, otherwise known as a dataport.
 
 ```
 X-EXOSITE-CIK: af027fe792f0fc74cedbe3777f5a22961e7b8384
