@@ -21,11 +21,13 @@ SeeedStudio BeagleBone Green (BBG) is a low-cost, open-source, community-support
 
 ### TI CC3200 SimpleLink™ Wi-Fi® and Internet-of-Things solution
 
+The CC3200 device is a complete platform solution including software, sample applications, tools, user and programming guides, reference designs, and the TI E2E™ support community. The device is available in a QFN package that is easy to layout.
+
 [http://www.ti.com/product/CC3200](http://www.ti.com/product/CC3200)
 
 ## Software
 
-### Murano ClI
+### Murano CLI
 
 Murano CLI is a command-line utility for working with Murano. Think of it as a way to simplify and automate repetitious tasks for those who are comfortable with the command-line interface. 
 
