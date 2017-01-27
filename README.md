@@ -3,9 +3,9 @@
 Welcome to Murano, Exosite's enterprise IoT software platform. Use this documentation site to familiarize yourself with Exosite's products and explore the many features available to you through Murano.
 
 <a class="btn orange" href="https://exosite.com/business/signup">Murano Signup</a>
-<a class="btn orange" href="/murano/get-started">Murano Getting-Started Guides</a>
+<a class="btn orange" href="/quickstart">Murano Quickstarts</a>
 
-![murano overview image](/murano/assets/platform_overview.png)
+![murano overview image](/assets/platform_overview.png)
 
 # Murano Overview
 
@@ -21,13 +21,24 @@ Murano allows developers to build full IoT systems quickly, while maintaining th
 
 The Business concept in Murano is a virtual space that houses all the products and solutions created by your organization. A Business does not necessarily have to be a real-life company. A business could be a development or testing space for trying out new innovations. The business page is the place to manage your account, user access, products, solutions, billing and payments, and more.
 
+[Manage Businesses](/guides/create-business/)
+
 ## Products
 
 The Product concept in Murano represents a connected device type. It provides tools and interfaces to manage product definitions, allowing developers to deploy a fleet of devices using a common API hostname, provisioning sequence, definition for data routing, and content for things like infield updates and configuration. Developers can quickly build devices and verify device behavior using integrated prototyping dashboards.
 
+[Create a Product](/guides/create-product/)
+
 ## Solutions
 
 The Solution concept in Murano represents the application logic, user interfaces, and APIs for an IoT application. It provides the tools needed to build and deploy applications and services on top of IoT device data using concepts of data routing, integrated services, custom APIs, user auth/roles/permissions, and application asset hosting. This allows developers to create solution templates that contain the entire application functionality to deploy to end users or to provide a custom API for their products.
+
+[Create a Solution](/guides/create-solution/)
+
+## Services
+
+
+[Work with Services](/services/)
 
 # Need Help?
 

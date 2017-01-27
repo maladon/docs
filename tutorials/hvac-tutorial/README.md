@@ -180,7 +180,7 @@ Before continuing you will need to find the ID of the product you created.
 
 ### Murano CLI
 
-To create a new production using the Murano CLI:
+To create a new product using the Murano CLI:
 
 ```sh
 $ murano product create <name>

@@ -1,15 +1,15 @@
-## Create a Product
+# Create a Product
 
-Next, you will need to create a product. The product you create is the virtual representation of the BBG’s physical hardware and sensors that will send data to the Murano platform. 
+The product you create is the virtual representation of the physical hardware and sensors that will send data to the Murano platform. 
 
-### Web UI
+## Web UI
 
 To create a new product using the Web UI:
 
 1. Navigate to the following URL: 
    [https://www.exosite.io/business/products](https://www.exosite.io/business/products)
 
-   ![new product](assets/new_product.png)
+   ![new product](../assets/new_product.png)
 
 1. Click on "+ NEW PRODUCT." 
 
@@ -17,7 +17,7 @@ To create a new product using the Web UI:
 
 1. Open the *Choose Starting Point* dropdown, select *Start from scratch*, and click the "ADD" button. In the next step you can use code to configure your product.
 
-   ![new product](assets/new_product_popup.png)
+   ![new product](../assets/new_product_popup.png)
 
 Before continuing you will need to find the ID of the product you created.
 
@@ -27,12 +27,12 @@ Before continuing you will need to find the ID of the product you created.
 
 3. Copy the Product ID on this page.
 
-   ![product id](assets/product_id.png)
+   ![product id](../assets/product_id.png)
 
 
-### Murano CLI
+## Murano CLI
 
-To create a new production using the Murano CLI:
+To create a new product using the Murano CLI:
 
 ```sh
 $ murano product create <name>
@@ -40,7 +40,7 @@ $ murano product create <name>
 
 This command will return the ID of your product for the next step.
 
-## Configure Your Product
+# Configure Your Product
 
 To configure your product you can use the config command of the Murano CLI tool. This command tells Murano CLI which product to use. 
 
@@ -53,4 +53,4 @@ Executing the command below will set the product definition for this example as 
 ```
 $ murano syncup --specs
 ```
-This command sets up all of the data aliases that we will use in this example. You can now see them by going to [https://www.exosite.io/business/products](https://www.exosite.io/business/products) and clicking the 'Definition' tab. Many of the aliases are used by Gateway Engine. Notice the aliases like 'ambient_temperature', 'desired_temperature', and 'heat_on'. These are all the different resources that will used for this HVAC tutorial. 
+This command sets up all of the data aliases in the spec file. You can now see them by going to [https://www.exosite.io/business/products](https://www.exosite.io/business/products) and clicking the 'Definition' tab. These are all the different resources that will used by your hardware. 

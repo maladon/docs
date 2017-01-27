@@ -3,7 +3,7 @@ title: Murano Getting Started Manually
 template: default
 ---
 
-# Getting-started Guide: Manually Activate a Connected Lightbulb Device Using APIs
+# Guide: Manually Activate a Connected Lightbulb Device Using APIs
 
 In this guide, you will manually activate a device to act as a connected lightbulb using API calls. 
 
