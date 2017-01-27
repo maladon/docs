@@ -251,6 +251,8 @@ If you have hardware available, you can walk through installing required softwar
 
 [BeagleBone Green Wireless](beaglebone.md)
 
+[TI CC3200](cc3200.md)
+
 If you do not have hardware available, you can walk through running the simulator. This should provide you with an easy starting point for connecting devices and creating solutions to visualize and interpret your device's data.
 
 [Python Simulator](simulator.md)

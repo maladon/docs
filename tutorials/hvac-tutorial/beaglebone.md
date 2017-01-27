@@ -43,7 +43,7 @@ Plug in your BBG and sensor as shown below:
 
    ![wiring setup](../assets/bbg_wiring_setup.jpg)
 
-Using a smartphone or computer,
+Using a smartphone or computer:
 
 1.  Go to your Wi-Fi settings.
 
@@ -178,7 +178,7 @@ Now you will add your device to your product in Murano
 
    ![image alt text](../assets/new_device_popup.png)
 
-5. Add a device with a Name and Identity. The Name can be any string to help remember which device it is. The Identity should either be the MAC address of your BBG.
+5. Add a device with a Name and Identity. The Name can be any string to help remember which device it is. The Identity should be the MAC address of your BBG.
 
 ## Enable Serial Number which is the MAC Address of the Device
 
@@ -207,4 +207,4 @@ In a web browser, type in the IP address of the BBG in the following format:
 http://xxx.xxx.xxx.xxx:3000/
 ```
 
-Copy the code from TH02.py into the code area and click run.
+Copy the code from TH02.py into the code area and click run. This will read data from the temperature and humidity sensor and send the data to your Murano solution.
