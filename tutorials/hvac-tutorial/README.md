@@ -199,7 +199,7 @@ $ murano config product.id <productid>
 Executing the command below will set the product definition for this example as defined in the `specs/resources.yaml` file. 
 
 ```
-$ murano syncup --specs 
+$ murano syncup --specs
 ```
 This command sets up all of the data aliases that we will use in this example. You can now see them by going to [https://www.exosite.io/business/products](https://www.exosite.io/business/products) and clicking the 'Definition' tab. Many of the aliases are used by Gateway Engine. Notice the aliases like 'ambient_temperature', 'desired_temperature', and 'heat_on'. These are all the different resources that will used for this HVAC tutorial. 
 
