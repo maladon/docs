@@ -65,7 +65,7 @@ To get started with this tutorial, you will need to create an Exosite account us
    
 ## Install Murano CLI
 
-To continue this tutorial, you'll need to open your terminal.
+Exosite offers a command line tool that allows you to efficiently work with the project in this tutorial. Even though everything in this tutorial can be accomplished using a the Web UI, feel free to install the Murano CLI.
 
 ```
 Murano CLI is the command-line tool that interacts with Murano and makes tasks easier. Murano CLI makes it simple to deploy code to a solution, import many product definitions at once, set up endpoints and APIs, and more. 
@@ -100,7 +100,7 @@ If prompted, please enter your local computer password.
 
 This tutorial uses a common codebase that includes a web application and specifications for the hardware. The code has been written to be flexible and works with multiple hardware platforms or the Python simulator.
 
-[https://www.github.com/exosite/hvac-reference-app/release/link.zip](https://www.github.com/exosite/hvac-reference-app/release/link.zip)
+[https://github.com/exosite/hvac-reference-application/archive/v0.1.zip](https://github.com/exosite/hvac-reference-application/archive/v0.1.zip)
 
 ## Create a Solution
 
