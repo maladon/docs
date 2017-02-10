@@ -1,5 +1,5 @@
 ---
-title: Murano Quickstart
+title: Murano Quickstarts
 template: default
 ---
 

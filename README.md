@@ -49,8 +49,17 @@ The Solution concept in Murano represents the application logic, user interfaces
 
 # Need Help?
 
-- [Support Services](https://support.exosite.com/hc/)
+Exosite makes every effort to ease your development of IoT solutions. But in the end, developing an IoT solution still requires a developer. If you need help with your IoT solution, we're here to ensure your success.
+
+
 - [Professional Services](https://exosite.com/services/professional-services/)
+
+If you have a question and need help, our community is a great place to start. Our Support Specialists are constantly monitoring the community to provide the support you need.
+
 - [Community Forum](https://community.exosite.com/)
+
+Need more help? Interested in learning about how our premium and critical support can help your company? Send us an email and we'll take care of you.
+
+- [Support Services](https://support.exosite.com/hc/)
 
 
