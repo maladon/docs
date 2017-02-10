@@ -8,7 +8,7 @@ template: default
 Welcome to Murano, Exosite's enterprise IoT software platform. Use this documentation site to familiarize yourself with Exosite's products and explore the many features available to you through Murano.
 
 <a class="btn orange" href="https://exosite.com/business/signup">Murano Signup</a>
-<a class="btn orange" href="/quickstart">Murano Quickstarts</a>
+<a class="btn orange" href="/quickstarts">Murano Quickstarts</a>
 
 ![murano overview image](/assets/platform_overview.png)
 
