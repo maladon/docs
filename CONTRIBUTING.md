@@ -51,6 +51,19 @@ Frontmatter is optional.
 
 ## Developing
 
+First step is to get the documentation files on your local machine!  The best
+way to do that is to us git and clone the documentation repository from 
+github.  
+
+If you don't know how to use git, see the <a href="https://i.exosite.com/display/ENG/GIT+Usage+Guide">in-house tutorial</a>, go get a github account, and work 
+with the documentation team to get your user added to the github documentation 
+project.  Once you do that, you can open a command line, and clone the 
+repository onto your local machine via git clone (for example: git clone 
+https://github.com/exosite/docs.git).  If you are working on a branch, make 
+sure to switch to that branch before editing files...
+
+### Local Preview
+
 When making changes that are more substantial than a technical or grammar fix
 you'll probably want to fix preview your changes locally. You'll need three
 tools to generate the site, Node.js, Node Package Manager, and Gulp.
