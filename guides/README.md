@@ -1,9 +1,8 @@
 # Murano Guides Overview
 
-Guides will help you to accomplish specific tasks within Murano.
+Exosite provides the following guides to help you accomplish specific tasks within Murano.
 
 # Murano Guides
-
 
 * [MQTT](/guides/mqtt/)
 * [OAuth](/guides/oauth/)

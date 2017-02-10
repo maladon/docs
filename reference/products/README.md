@@ -3,7 +3,7 @@ title: Murano Products Overview
 template: default
 ---
 
-# Producs Overview
+# Products Overview
 
 ![murano overview](assets/platform_overview.png)
 
