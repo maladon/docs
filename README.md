@@ -1,3 +1,8 @@
+---
+title: Murano Overview
+template: default
+---
+
 # Murano Documentation
 
 Welcome to Murano, Exosite's enterprise IoT software platform. Use this documentation site to familiarize yourself with Exosite's products and explore the many features available to you through Murano.
@@ -21,7 +26,7 @@ Murano allows developers to build full IoT systems quickly, while maintaining th
 
 The Business concept in Murano is a virtual space that houses all the products and solutions created by your organization. A Business does not necessarily have to be a real-life company. A business could be a development or testing space for trying out new innovations. The business page is the place to manage your account, user access, products, solutions, billing and payments, and more.
 
-[Manage Businesses](/guides/create-business/)
+[Manage Your Business](/guides/manage-business/)
 
 ## Products
 
@@ -38,7 +43,7 @@ The Solution concept in Murano represents the application logic, user interfaces
 ## Services
 
 
-[Work with Services](/services/)
+[Work with Services](/reference/services/)
 
 # Need Help?
 

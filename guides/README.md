@@ -1,5 +1,5 @@
 [MQTT](/guides/mqtt/)
 [OAuth](/guiodes/oauth/)
-[Products - Device API](/guides/products/device-api/)
-[Products - Provision API](/guides/products/provision-api/)
-[Scripting](/guides/scripting/)
+[Products - Device API](/reference/products/device-api/)
+[Products - Provision API](/reference/products/provision-api/)
+[Scripting](/reference/scripting/)

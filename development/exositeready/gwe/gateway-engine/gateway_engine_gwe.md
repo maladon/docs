@@ -298,7 +298,7 @@ As with any other Linux OS, gateways can suffer from their disk space getting fi
 
 # Exosite APIs
 
-GWE comes with the [HTTP and Provisioning](/guides/products/device_api/http/) implemented in Python as a globally importable module that, in essence, functions as the gateway protocol layer. This means that, if you choose to write your applications in Python, you will not have to spend time writing an Exosite interface library to make HTTP and Provisioning calls. This library is developed in a separate repository called `device-client`.
+GWE comes with the [HTTP and Provisioning](/reference/products/device_api/http/) implemented in Python as a globally importable module that, in essence, functions as the gateway protocol layer. This means that, if you choose to write your applications in Python, you will not have to spend time writing an Exosite interface library to make HTTP and Provisioning calls. This library is developed in a separate repository called `device-client`.
 
 ```
 # test_app.py

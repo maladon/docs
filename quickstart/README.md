@@ -38,7 +38,7 @@ At the end of each quickstart, you should have either a physical or simulated de
 
 In this section, you will clone and deploy an example consumer application for the connected lightbulb you created in the previous section. The example consumer application templates below provide all the source code and configuration necessary to complete this task.  
 
-At the end of this getting-started guide, you should have a deployed web application that has:
+At the end of this quickstart, you should have a deployed web application that has:
 
 * Unique user signup and login
 

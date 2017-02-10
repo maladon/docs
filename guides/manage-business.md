@@ -1,4 +1,9 @@
-# Create Business
+---
+title: Manage Your Business
+template: default
+---
+
+# Guide: Manage Your Business
 
 1. Once you have an active account and have logged in, you can navigate to the following URL to see your newly created business [https://www.exosite.io/business/memberships](https://www.exosite.io/business/memberships).
 

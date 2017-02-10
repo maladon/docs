@@ -1,9 +1,9 @@
 ---
-title: Murano OAuth Guide
+title: Murano OAuth
 template: default
 ---
 
-# Murano OAuth User Guide
+# Guide: Murano OAuth User
 
 This document describes how to use the Murano User service to connect with an OAuth provider. This allows the end users of a solution to sign in using an existing identity such as Google or Facebook rather than using username and password.
 
