@@ -249,10 +249,10 @@ At this point your product and solution is configured and ready to start receivi
 
 If you have hardware available, you can walk through installing required software on your hardware, connecting the hardware and its sensors to the Murano platform, and connecting the sensor data to a Murano solution.
 
-[BeagleBone Green Wireless](beaglebone.md)
+[BeagleBone Green Wireless](./beaglebone/)
 
-[TI CC3200](cc3200.md)
+[TI CC3200](./cc3200/)
 
 If you do not have hardware available, you can walk through running the simulator. This should provide you with an easy starting point for connecting devices and creating solutions to visualize and interpret your device's data.
 
-[Python Simulator](simulator.md)
+[Python Simulator](./simulator/)

@@ -9,7 +9,7 @@ A common need when managing a fleet of devices is to track metrics and error log
 
 ## Prerequisites
 
-* A Murano account with a solution is required. To create a solution, you can follow the [getting-started guide](../../get-started/solutions/exampleapp/#).
+* A Murano account with a solution is required. To create a solution, you can follow the [getting-started guide](/quickstarts/solutions/exampleapp/).
 
 
 ## Collect Metrics
@@ -19,7 +19,7 @@ A first step for monitoring your device fleet is to collect information from dev
 * The number of messages per day
 * The contents of the last 10 messages
 
-Murano solutions provide a [datapoint event](../../services/device/#datapoint) that gives you an opportunity to respond to incoming device data. When handling datapoints you may perform data conversion, store data, or send alerts. You may modify the way your solution responds to data by editing the handler for the datapoint event in Murano's web-based code editor or by uploading code using the command line tool. 
+Murano solutions provide a [datapoint event](/reference/services/device/#datapoint) that gives you an opportunity to respond to incoming device data. When handling datapoints you may perform data conversion, store data, or send alerts. You may modify the way your solution responds to data by editing the handler for the datapoint event in Murano's web-based code editor or by uploading code using the command line tool. 
 
 For the purpose of this guide, you can use the web-based editor. To modify the datapoint event handler, click on the *SERVICES* tab of your solution, select *Products*, and select the code tab. The code found here is executed when any devices with product types associated with the solution send data. You can now add code to store metrics to the Keystore service.
 
@@ -148,7 +148,7 @@ curl https://<product_id>.m2.exosite.com/provision/activate \
 -d "vendor=<product_id>&model=<product_id>&sn=<identity>"
 ```
 
-The CIK for the device is returned. See the [activate API](../../products/device_api/http/#activate) documentation for more about the activation step.
+The CIK for the device is returned. See the [activate API](/reference/products/device-api/http/#activate) documentation for more about the activation step.
 
 With the CIK in hand you are ready to write data. If you do not have a physical device, you can simulate one by sending data using the [write API](../../products/device_api/http#write). Here is how to do that using curl. Again, be sure to substitute the items in brackets with your values.
 

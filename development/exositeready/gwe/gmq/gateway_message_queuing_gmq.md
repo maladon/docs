@@ -4,7 +4,7 @@ Gateway Message Queuing (GMQ) is designed to be a local proxy for Exosite, with 
 
 # The Basics
 
-GMQ is designed to be a localhost **store-and-forward-style** HTTP server that processes incoming requests and, when a network connection cannot be made, retries them when the network becomes available. The `gmq` API contains the following subset of the [Exosite HTTP Data API](http://docs.exosite.com/murano/products/device_api/http/).
+GMQ is designed to be a localhost **store-and-forward-style** HTTP server that processes incoming requests and, when a network connection cannot be made, retries them when the network becomes available. The `gmq` API contains the following subset of the [Exosite HTTP Data API](/reference/products/device-api/http/).
 
 * **activate**
 * **write**

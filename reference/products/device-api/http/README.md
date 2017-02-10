@@ -27,7 +27,7 @@ This is the HTTP Device API for the Murano Platform. Device firmware and applica
 
 Sample code that uses this API can be found on the Murano Getting Started product examples:
 
-* [Murano Getting Started Product Examples](/murano/get-started/)
+* [Murano Quickstarts](/quickstarts/)
 
 ## Notational Conventions
 

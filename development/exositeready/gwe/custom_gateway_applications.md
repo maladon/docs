@@ -99,7 +99,7 @@ x modbus_lib/
 
 
 Navigate to the [Release Packages](/exositeready/gwe/release_packages) section and download the latest copy of GWE to your development machine.
-Navigate to the [Release Packages](http://docs.exosite.com/exositeready/gwe/release_packages/) section and download the latest copy of GWE to your development machine.
+Navigate to the [Release Packages](/development/exositeready/gwe/release_packages/) section and download the latest copy of GWE to your development machine.
 
 ### Optional Setup
 

@@ -6,7 +6,7 @@ Guides will help you to accomplish specific tasks within Murano.
 
 
 * [MQTT](/guides/mqtt/)
-* [OAuth](/guiodes/oauth/)
-* [Products - Device API](/reference/products/device-api/)
+* [OAuth](/guides/oauth/)
+* [Products - Device API](/reference/products/device-api/http/)
 * [Products - Provision API](/reference/products/provision-api/)
 * [Scripting](/reference/scripting/)

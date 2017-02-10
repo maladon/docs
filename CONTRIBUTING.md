@@ -24,7 +24,7 @@ the GitHub web interface most pages should be named README.md. The site
 generator will save the generated HTML from any README.md file into an
 index.html file. This means that, for instance, the RPC doc, `/rpc/README.md`
 will generate the page `/rpc/index.html` which can then be viewed at
-docs.exosite.com/rpc
+[Portals RPC Documentation](/portals/rpc)
 
 In addition to markdown files the generator will copy all .html, .png, and .jpg
 files in place.

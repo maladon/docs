@@ -37,7 +37,7 @@ Create a solution using the home automation example as a starting point here:
 
 ![image alt text](exampleapp_1.png)
 
-Notice, the Home Automation Example will pull in a public GitHub repository. If you are using your own GitHub repository in the future, it will not be linked to your solution (e.g., push to your GitHub repository and see changes on your solution). It consumes the repository when creating the solution, and you can push changes using the <a href="../../../exosite-cli/" target="_blank">Exosite CLI</a>.
+Notice, the Home Automation Example will pull in a public GitHub repository. If you are using your own GitHub repository in the future, it will not be linked to your solution (e.g., push to your GitHub repository and see changes on your solution). It consumes the repository when creating the solution, and you can push changes using the <a href="/development/tools/murano-cli/" target="_blank">Murano CLI</a>.
 
 
 ![image alt text](exampleapp_2.png)
@@ -79,7 +79,7 @@ Your product is now linked to your solution and can be added as a device.
 
 3. After signing up, click on the email verification link, then log in.
 
-4. In the new web app, add a lightbulb using the identity of the device you added earlier (e.g., if you <a href="../../products/pythonsim/" target="_blank">simulated a device using a Python script</a>, your device identity would most likely be "000001"). Click "ADD." 
+4. In the new web app, add a lightbulb using the identity of the device you added earlier (e.g., if you <a href="/quickstarts/lightbulb/" target="_blank">simulated a lightbulb using a Python script</a>, your device identity would most likely be "000001"). Click "ADD." 
 
   **NOTE:** If you have not added a device yet, it will throw an error.
 

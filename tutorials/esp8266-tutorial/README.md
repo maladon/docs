@@ -1,14 +1,14 @@
-# Getting-started Guide: Prototype a Connected Lightbulb Using an ESP8266 Thing Dev Board
+# Connected Lightbulb Using an ESP8266 Thing Dev Board Tutorial
 
-In this guide, you will set up an ESP8266 Thing Dev Board to act as a connected lightbulb. You will then create a development dashboard within Murano, where you can see temperature and humidity data from the device and have the ability to remotely turn the lightbulb on and off.
+In this tutorial, you will set up an ESP8266 Thing Dev Board to act as a connected lightbulb. You will then create a development dashboard within Murano, where you can see temperature and humidity data from the device and have the ability to remotely turn the lightbulb on and off.
 
-**NOTE:** The ESP8266 Thing Dev Board has a known issue when using Arduino on a Windows machine. Please make sure digital pin 0 is grounded, or use a Linux machine to complete this guide.
+**NOTE:** The ESP8266 Thing Dev Board has a known issue when using Arduino on a Windows machine. Please make sure digital pin 0 is grounded, or use a Linux machine to complete this tutorial.
 
 # Requirements
 
 ## Hardware Setup
 
-To complete this guide, you will need the following hardware: 
+To complete this tutorial, you will need the following hardware: 
 
 * [SparkFun ESP8266 Thing Dev Board](https://www.sparkfun.com/products/13711)
 
@@ -28,9 +28,9 @@ To begin, connect the components as shown in the image below.
 
 ## Software Setup
 
-To complete this guide, you will need to set up the Arduino IDE as well as the board support for the ESP8266.
+To complete this tutorial, you will need to set up the Arduino IDE as well as the board support for the ESP8266.
 
-New to Arduino? Below are a few links to get an understanding of Arduino since this guide does not cover every concept of the Arduino IDE and hardware (in this case, the SparkFun ESP8266 Thing Dev Board). Note that Arduino supports a number of hardware platforms, not just Arduino-branded boards themselves, like the ESP8266 Thing Dev Board.
+New to Arduino? Below are a few links to get an understanding of Arduino since this tutorial does not cover every concept of the Arduino IDE and hardware (in this case, the SparkFun ESP8266 Thing Dev Board). Note that Arduino supports a number of hardware platforms, not just Arduino-branded boards themselves, like the ESP8266 Thing Dev Board.
 
 * [SparkFun ESP8266 Thing Dev Board](https://www.sparkfun.com/products/13711)
 
@@ -218,5 +218,5 @@ In this section, you will create a dashboard to view the data from the connected
 
 Congratulations—you just remotely turned a light on and off.
 
-[UP NEXT: CREATE A SOLUTION >>](http://docs.exosite.com/murano/get-started/solutions/exampleapp/)
+[UP NEXT: CREATE A SOLUTION >>](/quickstarts/solutions/exampleapp/)
 

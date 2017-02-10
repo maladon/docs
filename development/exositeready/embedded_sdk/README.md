@@ -25,6 +25,6 @@ Ports to specific hardware platforms can be found by clicking on our partner bel
     </tr>
     <tr>
         <td style="text-align: center;">![Microchip](microchip_logo.png)</td>
-        <td style="width:80%;padding-top:40px;padding-bottom:40px;">[Microchip Hardware Platforms ExositeReady Embedded SDK Ports](http://docs.exosite.com/exositeready/microchip)</td>
+        <td style="width:80%;padding-top:40px;padding-bottom:40px;">[Microchip Hardware Platforms ExositeReady Embedded SDK Ports](/development/exositeready/microchip)</td>
     </tr>
 </table>
