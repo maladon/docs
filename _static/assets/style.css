@@ -71,22 +71,31 @@ body:not(.no-literate) .content-root {
   float: left;
 }
 
-ul.topmenu {
+.topmenu {
   margin: 30px 0px 0px 30px;
 }
 
-ul.topmenu a {
+.topmenu ul {
+    padding-bottom:1em;
+}
+
+.topmenu ul li a {
   box-sizing: border-box;
   position: relative;
   display: block;
 }
 
-ul.topmenu a.active {
+.topmenu ul li a.active {
   background: #ddd;
   padding-left: 30px;
   margin-left: -30px;
   margin-right: 0px;
   padding-right: 0px;
+}
+
+li.menu-header {
+  font-size: larger;
+  text-transform: uppercase;
 }
 
 div.content img {
@@ -236,8 +245,4 @@ a.btn.orange {
 }
 .menubar a.level-1 {
   font-size: 0.9em;
-}
-
-.menubar ul p {
-  text-transform: uppercase;
 }
