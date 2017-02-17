@@ -13,6 +13,7 @@ var gulp = require('gulp'),
 
 var defaultTemplate = new Buffer(fs.readFileSync("_static/_layouts/default.html"));
 var portalsTemplate = new Buffer(fs.readFileSync("_static/_layouts/portals.html"));
+var muranoTemplate = new Buffer(fs.readFileSync("_static/_layouts/murano.html"));
 
 var site_search_index = [];
 
@@ -151,6 +152,8 @@ gulp.task('md', ['fetch-svc-docs'], function() {
         content.attributes.body = marked(body);
         if (content.attributes.template == "portals") {
             file.contents = portalsTemplate;
+        } else if (content.attributes.template == "murano") {
+            file.contents = muranoTemplate;
         } else {
             file.contents = defaultTemplate;
         }
