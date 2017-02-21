@@ -1,0 +1,88 @@
+@import "bootstrap/index";
+
+@import "./theme";
+@import "./variables";
+
+@import "./exosite";
+
+@navbar-height: 60px;
+@docs-header: #222736;
+@sidebar-background: #F0F0F0;
+@brand-primary: @exo-blue;
+@brand-warning: @exo-orange;
+@font-family-sans-serif: 'Dosis',sans-serif;
+@dropdown-link-hover-bg: @exo-navy;
+@dropdown-link-hover-color: @exo-orange;
+@border-radius-base: 2px;
+@border-radius-large: 2px;
+@border-radius-small: 2px;
+@navbar-margin-bottom: 0px;
+@list-group-hover-bg: @exo-navy;
+@list-group-link-hover-color: @exo-orange;
+
+body {
+  .navbar-top {
+    box-shadow: 0 0 10px #1a1a1a;
+    background-color: @docs-header;
+    // TODO: Hack to get around background-image taking predence over background-color
+    background-image: linear-gradient(@docs-header, @docs-header);
+    .navbar-brand {
+      > img {
+        height: 28px;
+        margin-top: -3px;
+      }
+    }
+
+    .navbar-text {
+      margin-left: 30px;
+      font-size: 16px;
+      font-style: bold;
+    }
+
+    .active {
+      background-color: @brand-primary;
+      background-image: linear-gradient(@brand-primary, @brand-primary);
+    }
+  }
+
+  .row {
+    background-color: #F0F0F0;
+
+    .sidebar {
+      background-color: @sidebar-background;
+      color: @gray-darker;
+      height: 100%;
+      padding-top: 10px;
+      padding-left: 5px;
+      padding-right: 0px;
+
+      ul {
+        text-transform: uppercase;
+        .menu-header {
+          margin-top: 5px;
+        }
+        li > a {
+          text-transform: capitalize;
+          font-size: 12px;
+          padding: 3px 3px;
+        }
+        li > a:hover {
+          background-color: @exo-navy;
+          color: @exo-orange;
+        }
+
+      }
+    }
+
+    .main {
+      padding: 40px;
+      color: @gray-darker;
+      background-color: #FEFEFE;
+      h1 {
+        text-transform: uppercase;
+      }
+    }
+
+  }
+
+}
