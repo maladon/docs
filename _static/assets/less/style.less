@@ -49,11 +49,11 @@ body {
     background-color: #F0F0F0;
 
     .sidebar {
+      border-right: 1px solid rgba(22,27,36, 0.1);
       background-color: @sidebar-background;
       color: @gray-darker;
       height: 100%;
       padding-top: 10px;
-      padding-left: 5px;
       padding-right: 0px;
 
       ul {
@@ -61,16 +61,24 @@ body {
         .menu-header {
           margin-top: 5px;
         }
-        li > a {
-          text-transform: capitalize;
-          font-size: 12px;
-          padding: 3px 3px;
+        li {
+          // big negative margin to move everything off so we can have a full width
+          // link when active / hovered
+          margin-left: -15px;
+          // this padding offsets headers and list items
+          padding-left: 10px;
+          > a {
+            margin-left: -15px;
+            text-transform: capitalize;
+            font-size: 12px;
+            // this padding offsets the indentation of the sidebar links
+            padding: 5px 5px 5px 15px;
+          }
+          > a:hover {
+            background-color: @exo-navy;
+            color: @exo-orange;
+          }
         }
-        li > a:hover {
-          background-color: @exo-navy;
-          color: @exo-orange;
-        }
-
       }
     }
 
