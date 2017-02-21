@@ -6,11 +6,10 @@
 @import "./exosite";
 
 @navbar-height: 60px;
-@docs-header: #222736;
-@sidebar-background: #F0F0F0;
+@header-color: @exo-navy;
 @brand-primary: @exo-blue;
 @brand-warning: @exo-orange;
-@font-family-sans-serif: 'Dosis',sans-serif;
+@font-family-sans-serif: 'Arial',sans-serif;
 @dropdown-link-hover-bg: @exo-navy;
 @dropdown-link-hover-color: @exo-orange;
 @border-radius-base: 2px;
@@ -20,12 +19,23 @@
 @list-group-hover-bg: @exo-navy;
 @list-group-link-hover-color: @exo-orange;
 
+// background for main and sidebar sections
+@content-background: #FEFEFE;
+
 body {
+  background-color: @exo-grey;
+
+  p > img {
+    max-width: 100%;
+    height: auto;
+  }
+
   .navbar-top {
     box-shadow: 0 0 10px #1a1a1a;
-    background-color: @docs-header;
+    background-color: @header-color;
     // TODO: Hack to get around background-image taking predence over background-color
-    background-image: linear-gradient(@docs-header, @docs-header);
+    background-image: linear-gradient(@header-color, @header-color);
+
     .navbar-brand {
       > img {
         height: 28px;
@@ -43,54 +53,60 @@ body {
       background-color: @brand-primary;
       background-image: linear-gradient(@brand-primary, @brand-primary);
     }
+
+    .mobile-docs {
+      padding-left: 20px;
+    }
   }
 
   .row {
-    background-color: #F0F0F0;
+    .sidenav-toggle {
+      background-color: @brand-primary;
+      color: @exo-navy;
+      font-size: 24px;
+      .icon-bar {
+        background-color: @exo-navy;
+      }
+    }
 
-    .sidebar {
-      border-right: 1px solid rgba(22,27,36, 0.1);
-      background-color: @sidebar-background;
-      color: @gray-darker;
-      height: 100%;
-      padding-top: 10px;
-      padding-right: 0px;
+    .sidenav {
+      border-bottom: 5px solid @exo-blue;
+      margin: 10px;
+      box-shadow: 5px 5px 14px 0px #333;
+      background-color: @content-background;
+      padding: 10px 10px;
+
+      .sidenav-header {
+        color: @gray-light;
+        font-size: 22px;
+      }
 
       ul {
+        margin-left: 5px;
         text-transform: uppercase;
         .menu-header {
+          color: @gray-light;
           margin-top: 5px;
         }
         li {
-          // big negative margin to move everything off so we can have a full width
-          // link when active / hovered
-          margin-left: -15px;
-          // this padding offsets headers and list items
-          padding-left: 10px;
           > a {
-            margin-left: -15px;
             text-transform: capitalize;
-            font-size: 12px;
-            // this padding offsets the indentation of the sidebar links
-            padding: 5px 5px 5px 15px;
-          }
-          > a:hover {
-            background-color: @exo-navy;
-            color: @exo-orange;
           }
         }
       }
     }
 
     .main {
+      border-bottom: 5px solid @exo-blue;
+      margin: 10px;
       padding: 40px;
-      color: @gray-darker;
-      background-color: #FEFEFE;
+      color: @gray-dark;
+      background-color: @content-background;
+      box-shadow: 5px 5px 14px 0px #333;
+
       h1 {
         text-transform: uppercase;
       }
     }
-
   }
-
 }
