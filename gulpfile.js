@@ -131,6 +131,10 @@ gulp.task('fetch-svc-docs', function (cb) {
 });
 
 gulp.task('md', ['fetch-svc-docs'], function() {
+ var portalsTemplate = new Buffer(fs.readFileSync("_static/_layouts/portals.html"));
+ var muranoTemplate = new Buffer(fs.readFileSync("_static/_layouts/murano.html"));
+ var defaultTemplate = new Buffer(fs.readFileSync("_static/_layouts/default.html"));
+
  return gulp.src(['**/*.md', '!node_modules/**'])
     .pipe(data(function(file) {
       var content;
@@ -148,13 +152,12 @@ gulp.task('md', ['fetch-svc-docs'], function() {
 
       try {
         content.attributes.body = marked(body);
-        console.log("template: ", content.attributes.template);
         if (content.attributes.template == "portals") {
-            file.contents = new Buffer(fs.readFileSync("_static/_layouts/portals.html"));;
+            file.contents = portalsTemplate;
         } else if (content.attributes.template == "murano") {
-            file.contents = new Buffer(fs.readFileSync("_static/_layouts/murano.html"));
+            file.contents = muranoTemplate;
         } else {
-            file.contents = new Buffer(fs.readFileSync("_static/_layouts/default.html"));
+            file.contents = defaultTemplate;
         }
 
         var tokens = marked.lexer(body);
@@ -181,6 +184,8 @@ gulp.task('md', ['fetch-svc-docs'], function() {
 })
 
 gulp.task('html', function() {
+  var defaultTemplate = new Buffer(fs.readFileSync("_static/_layouts/default.html"));
+
   return gulp.src(['_static/**/*.html', '!_static/_*/**'])
     .pipe(data(function(file) {
       var content;
@@ -194,7 +199,7 @@ gulp.task('html', function() {
       }
 
       content.attributes.body = body;
-      file.contents = new Buffer(fs.readFileSync("_static/_layouts/default.html"));
+      file.contents = defaultTemplate;
 
       return content.attributes;
     }))
