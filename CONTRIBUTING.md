@@ -113,3 +113,15 @@ You can also startup a local server to see your changes in the browser with
 ```
 gulp serve
 ```
+
+### Markdown Suggestions for Local vs. Github/Published Idiosyncracies
+
+* **Images**:
+ * For images you don't need to resize, use the format: `![Image Reference](/fullpath/image.png)`
+ * For images you need to resize, use the format:`<img src="/fullpath/image.png" height="200" alt="Image Reference">`
+ * You have to use the full path from the base of the docs folder (e.g. /guides/assets/imagename.png) for both your local and github to render properly (local will render with a relative path but github will not)
+ 
+* **Links that Work on https://docs.exosite.com but not on Local**
+ * Some docs are created from developer documentation.  These docs are replaced when the docs site is pushed live per https://github.com/exosite/docs/blob/master/fetch_svc_docs.sh .
+  * This includes all information, for example, under /reference/services
+
