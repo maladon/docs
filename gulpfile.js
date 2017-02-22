@@ -6,6 +6,7 @@ var gulp = require('gulp'),
   swig = require('gulp-swig'),
   data = require('gulp-data'),
   rename = require('gulp-rename'),
+  less =  require('gulp-less'),
   fm = require('front-matter'),
   fs = require('fs'),
   clone = require('clone'),
@@ -113,7 +114,7 @@ function convert_to_final_path(rel_path) {
   };
 }
 
-gulp.task('default', ['fetch-svc-docs', 'md', 'js', 'css', 'img', 'html', 'assets', 'il-img', 'write-search-index']);
+gulp.task('default', ['fetch-svc-docs', 'md', 'js', 'css', 'less', 'img', 'html', 'assets', 'il-img', 'write-search-index']);
 
 gulp.task('write-search-index', ['md'], function() {
   fs.writeFileSync('_site/search_index.json', JSON.stringify(site_search_index), 'utf8');
@@ -169,7 +170,7 @@ gulp.task('md', ['fetch-svc-docs'], function() {
 
       return content.attributes;
     }))
-    .pipe(swig({defaults: {autoescape: false}}))
+    .pipe(swig({defaults: {autoescape: false, cache: false}}))
     .pipe(rename(function(path){
       if (path.basename == "README") {
         path.basename = "index";
@@ -199,7 +200,7 @@ gulp.task('html', function() {
 
       return content.attributes;
     }))
-    .pipe(swig({defaults: {autoescape: false}}))
+    .pipe(swig({defaults: {autoescape: false, cache: false}}))
     .pipe(gulp.dest('_site'));
 })
 
@@ -210,6 +211,17 @@ gulp.task('js', function() {
 
 gulp.task('css', function() {
   return gulp.src('_static/assets/**/*.css')
+    .pipe(gulp.dest('_site/assets'));
+});
+
+gulp.task('less', function() {
+  return gulp.src('_static/assets/**/*.less')
+    .pipe(less({
+      paths: [
+        './_static/assets/less/',
+        './node_modules/bootstrap-less'
+      ]
+    }))
     .pipe(gulp.dest('_site/assets'));
 });
 
@@ -231,6 +243,9 @@ gulp.task('assets', function() {
 gulp.task('watch', ['default'], function () {
   watch('_static/assets/**/*.css', function () {
     gulp.start('css');
+  });
+  watch('_static/assets/**/*.less', function () {
+    gulp.start('less');
   });
   watch('_static/assets/**/*.js', function () {
     gulp.start('js');
