@@ -46,6 +46,7 @@ When the Murano data API receives the "temp=101" payload, it triggers a data eve
 2. check the "temp" value and set a warning flag in a "product status" array
 
 When the warning flag is set in the product status array, that message is carried internal to Murano to the Application's "Product" websocket interface where Rules specific to the Application are ran:
+
 1. Check the "product status" array for warnings
 2. Lookup the User contact information that is assigned as the alert recipient for an over-temperature warning
 3. Send a message, "Over Temp!" to the alert recipient via the <a href="../../reference/services/twilio/" target="_blank">Twilio Integration Service</a> postMessage API (requires Twilio credentials) which uses the <a href="https://www.twilio.com" target="_blank">Twilio SMS External Web Sevice</a>
@@ -54,6 +55,7 @@ When the warning flag is set in the product status array, that message is carrie
 **Orange Path:**
 
 The Web Page issues a GET request to the Application URL's "/history" endpoint.  The "/history" endpoint was created and configured to execute Rules specific to that endpoint:
+
 1. Fetch the last N TSDB service temperature values
 2. Return the values as a response to the GET request on /history
 
