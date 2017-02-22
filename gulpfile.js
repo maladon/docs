@@ -12,9 +12,6 @@ var gulp = require('gulp'),
   clone = require('clone'),
   exec = require('child_process').exec;
 
-var defaultTemplate = new Buffer(fs.readFileSync("_static/_layouts/default.html"));
-var portalsTemplate = new Buffer(fs.readFileSync("_static/_layouts/portals.html"));
-var muranoTemplate = new Buffer(fs.readFileSync("_static/_layouts/murano.html"));
 
 var site_search_index = [];
 
@@ -151,12 +148,13 @@ gulp.task('md', ['fetch-svc-docs'], function() {
 
       try {
         content.attributes.body = marked(body);
+        console.log("template: ", content.attributes.template);
         if (content.attributes.template == "portals") {
-            file.contents = portalsTemplate;
+            file.contents = new Buffer(fs.readFileSync("_static/_layouts/portals.html"));;
         } else if (content.attributes.template == "murano") {
-            file.contents = muranoTemplate;
+            file.contents = new Buffer(fs.readFileSync("_static/_layouts/murano.html"));
         } else {
-            file.contents = defaultTemplate;
+            file.contents = new Buffer(fs.readFileSync("_static/_layouts/default.html"));
         }
 
         var tokens = marked.lexer(body);
@@ -196,7 +194,7 @@ gulp.task('html', function() {
       }
 
       content.attributes.body = body;
-      file.contents = defaultTemplate;
+      file.contents = new Buffer(fs.readFileSync("_static/_layouts/default.html"));
 
       return content.attributes;
     }))
