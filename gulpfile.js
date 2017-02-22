@@ -170,7 +170,7 @@ gulp.task('md', ['fetch-svc-docs'], function() {
 
       return content.attributes;
     }))
-    .pipe(swig({defaults: {autoescape: false}}))
+    .pipe(swig({defaults: {autoescape: false, cache: false}}))
     .pipe(rename(function(path){
       if (path.basename == "README") {
         path.basename = "index";
@@ -200,7 +200,7 @@ gulp.task('html', function() {
 
       return content.attributes;
     }))
-    .pipe(swig({defaults: {autoescape: false}}))
+    .pipe(swig({defaults: {autoescape: false, cache: false}}))
     .pipe(gulp.dest('_site'));
 })
 
