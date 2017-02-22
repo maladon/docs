@@ -5,7 +5,7 @@ template: default
 
 # Guide: Data Flow in Murano
 
-The basic components of an IoT system are Internet-connected hardware Products, real-time User Applications, and Integrations with external web & IT services.  As a Murano developer, to get these components working together, it is helpful to understand how the data flows within Murano.  This guide walks through a super simple Murano data flow that involves each of these basic components.
+The basic components of an IoT system are Internet-connected hardware Products, real-time User Applications, and Integrations with external web & IT services.  As a Murano developer, to get these components working together, it is helpful to understand how the data flows within Murano.  This guide walks through a Murano data flow that involves each of these basic components.
 
 <img src="/guides/assets/mdf-iot-simple-diagram.png" height="200" alt="Simple IoT System">
 
@@ -23,7 +23,7 @@ In our simplified system, let's have the temperature sensor communicate temperat
 To make that happen:
 * **Product:** Every 10 minutes, the temperature sensor wakes up, measures the temperature, and sends the value as the variable "temp" via one of the Murano data APIs (e.g. the <a href="/reference/products/device-api/http/" target="_blank">HTTP API</a>)
 * **Application:** Upon User load (or auto-refresh), the web page fetches the temperature history from a configured <a href="/guides/api-application/" target="_blank">API Application</a> that exposes a /history URL endpoint that returns the last N number of temperature values
-* **Integration:** As soon as the system detects that the data exceeds the 100 C threshold, an SMS message is sent out by an SMS gateway service (e.g. <a href="/reference/services/twilio/" target="_blank">Twilio</a>) to a user's phone
+* **Integration:** As soon as the system detects that the data exceeds the 100 C threshold, an SMS message is sent out by an <a href="/reference/services/twilio/" target="_blank">SMS gateway service</a> to a user's phone
  
 <img src="/guides/assets/mdf-iot-component-external-flow.png" height="300" alt="Simple IoT System">
 
@@ -37,7 +37,7 @@ Inside of Murano, this is what is happening:
 
 **Project Configuration:**
 
-A Product called "Temp Sensor" was created to authenticate temperature sensor Devices, and to manage all aspects of the Devices - all device traffic uses the Product URL created when the Product is instantiated.  An Application called "Web Page" was created to authenticate Users and to respond to User-driven events on a web page - configurable API Endpoints at the Application URL are created when the Application is instantiated. The Integration service "<a href="/reference/services/twilio/" target="_blank">Twilio</a>" was added to send out SMS messages.  And, the <a href="/reference/services/tsdb/" target="_blank">TSDB Service</a> is available to all Projects as a built-in Service.  All <a href="/reference/services/" target="_blank">Built-In Services</a> are available to the Rules Engines for both the Product and the Application.  
+A Product called "Temp Sensor" was created to authenticate temperature sensor Devices, and to manage all aspects of the Devices - all device traffic uses the Product URL created when the Product is instantiated.  An Application called "Dashboard" was created to authenticate Users and to respond to User-driven events on a web page - configurable API Endpoints at the Application URL are created when the Application is instantiated. The <a href="/reference/services/twilio/" target="_blank">Integration service for Twilio</a> was added to send out SMS messages.  And, the <a href="/reference/services/tsdb/" target="_blank">TSDB Service</a> is available to all Projects as a built-in Service.  All <a href="/reference/services/" target="_blank">Built-In Services</a> are available to the Rules Engines for both the Product and the Application.  
 
 **Blue Path:** 
 
@@ -49,7 +49,7 @@ When the warning flag is set in the product status array, that message is carrie
 
 1. Check the "product status" array for warnings
 2. Lookup the User contact information that is assigned as the alert recipient for an over-temperature warning
-3. Send a message, "Over Temp!" to the alert recipient via the <a href="../../reference/services/twilio/" target="_blank">Twilio Integration Service</a> postMessage API (requires Twilio credentials) which uses the <a href="https://www.twilio.com" target="_blank">Twilio SMS External Web Sevice</a>
+3. Send a message, "Over Temp!" to the alert recipient via Murano's <a href="../../reference/services/twilio/" target="_blank">SMS Integration service</a> for <a href="https://www.twilio.com" target="_blank">Twilio</a>
 
 
 **Orange Path:**
