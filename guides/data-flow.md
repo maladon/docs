@@ -7,7 +7,7 @@ template: default
 
 The basic components of an IoT system are Internet-connected hardware Products, real-time User Applications, and Integrations with external web & IT services.  As a Murano developer, to get these components working together, it is helpful to understand how the data flows within Murano.  This guide walks through a super simple Murano data flow that involves each of these basic components.
 
-<img src="../assets/mdf-iot-simple-diagram.png" height="200" alt="Simple IoT System">
+<img src="/guides/assets/mdf-iot-simple-diagram.png" height="200" alt="Simple IoT System">
 
 
 There are representations of these components inside of Murano - you have to setup & configure Products, Applications, and Integrations to get the full IoT system working.
