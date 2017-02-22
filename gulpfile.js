@@ -12,9 +12,6 @@ var gulp = require('gulp'),
   clone = require('clone'),
   exec = require('child_process').exec;
 
-var defaultTemplate = new Buffer(fs.readFileSync("_static/_layouts/default.html"));
-var portalsTemplate = new Buffer(fs.readFileSync("_static/_layouts/portals.html"));
-var muranoTemplate = new Buffer(fs.readFileSync("_static/_layouts/murano.html"));
 
 var site_search_index = [];
 
@@ -134,6 +131,10 @@ gulp.task('fetch-svc-docs', function (cb) {
 });
 
 gulp.task('md', ['fetch-svc-docs'], function() {
+ var portalsTemplate = new Buffer(fs.readFileSync("_static/_layouts/portals.html"));
+ var muranoTemplate = new Buffer(fs.readFileSync("_static/_layouts/murano.html"));
+ var defaultTemplate = new Buffer(fs.readFileSync("_static/_layouts/default.html"));
+
  return gulp.src(['**/*.md', '!node_modules/**'])
     .pipe(data(function(file) {
       var content;
@@ -183,6 +184,8 @@ gulp.task('md', ['fetch-svc-docs'], function() {
 })
 
 gulp.task('html', function() {
+  var defaultTemplate = new Buffer(fs.readFileSync("_static/_layouts/default.html"));
+
   return gulp.src(['_static/**/*.html', '!_static/_*/**'])
     .pipe(data(function(file) {
       var content;
