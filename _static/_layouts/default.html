@@ -39,7 +39,10 @@
     </script>
 
     <!-- Initializer -->
-    <script>{{ content }}</script>
+    <!--
+      TODO: this could break something unintentionally, but it removes an error from the console
+      <script>{{ content }}</script>
+    -->
 </head>
 <body>
 
@@ -66,7 +69,7 @@
           <li><a href='https://community.exosite.com' target="_blank">Developer Forum</a></li>
         </ul>
         <ul class="nav navbar-nav visible-xs">
-          <div class="mobile-docs">
+          <div class="nav-links mobile-docs">
             <ul class="nav navbar-nav">
               <li><a type="button" data-toggle="collapse" data-target="#nav-murano-platform" aria-expanded="false">Murano Platform</a></li>
               <ul class="navbar-collapse collapse list-unstyled" id="nav-murano-platform">
@@ -136,7 +139,7 @@
         <form class="navbar-form navbar-right form-inline">
           <!-- <a class="btn btn-warning" href="https://exosite.com/business/signup">Sign Up For Murano</a> -->
           <div class="form-group">
-            <input id="docsearch" type="text" class="form-control" placeholder="Search...">
+            <input id="docsearch" type="text" class="form-control nav-search" placeholder="Search...">
           </div>
         </form>
       </div><!-- /.navbar-collapse -->
@@ -146,8 +149,7 @@
   <div class="container-fluid">
 
     <div class="row">
-      <div class="col-sm-3 col-md-2 hidden-xs sidenav navbar-collapse collapse">
-
+      <div class="col-sm-3 col-md-2 hidden-xs sidenav navbar-collapse collapse nav-links">
         <h3 class="sidenav-header">General</h3>
         <ul class="list-unstyled">
           <li class="menu-header">Murano Platform</li>

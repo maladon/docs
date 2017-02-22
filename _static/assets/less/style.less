@@ -8,7 +8,8 @@
 @navbar-height: 60px;
 @header-color: @exo-navy;
 @brand-primary: @exo-blue;
-@brand-warning: @exo-orange;
+@brand-warning: #f15c2e;
+
 @font-family-sans-serif: 'Arial',sans-serif;
 @dropdown-link-hover-bg: @exo-navy;
 @dropdown-link-hover-color: @exo-orange;
@@ -21,20 +22,35 @@
 
 // background for main and sidebar sections
 @content-background: #FEFEFE;
-
+@content-color: #3c3c42;
 body {
   background-color: @exo-grey;
 
+  a {
+    color: @exo-medium-blue;
+  }
+
+  a:hover {
+    color: @exo-blue;
+  }
+
+  btn-warning:hover {
+    background-color: #e44427;
+  }
+
+  // makes images take up a maximum of 100% and
+  // not exceed the image's height
   p > img {
     max-width: 100%;
     height: auto;
   }
 
   .navbar-top {
-    box-shadow: 0 0 10px #1a1a1a;
+    // box-shadow: 0 0 20px #1a1a1a;
     background-color: @header-color;
     // TODO: Hack to get around background-image taking predence over background-color
     background-image: linear-gradient(@header-color, @header-color);
+    color: @gray-lighter;
 
     .navbar-brand {
       > img {
@@ -43,15 +59,28 @@ body {
       }
     }
 
+    .nav-search {
+      border-radius: 8px;
+    }
+
     .navbar-text {
       margin-left: 30px;
       font-size: 16px;
       font-style: bold;
     }
+    .navbar-nav > li > a, button > span.icon-bar {
+      color: @gray-lighter;
+    }
+    .navbar-nav > li > a:hover {
+      background-color: @exo-blue;
+    }
 
     .active {
       background-color: @brand-primary;
       background-image: linear-gradient(@brand-primary, @brand-primary);
+    }
+    a.current-page {
+      color: @exo-orange;
     }
 
     .mobile-docs {
@@ -70,20 +99,22 @@ body {
     }
 
     .sidenav {
-      border-bottom: 5px solid @exo-blue;
-      margin: 10px;
-      box-shadow: 5px 5px 14px 0px #333;
       background-color: @content-background;
+      border-bottom: 5px solid @exo-blue;
+      color: @content-color;
+      margin: 10px;
       padding: 10px 10px;
 
       .sidenav-header {
+        text-transform: uppercase;
+        font-weight: bold;
         color: @gray-light;
-        font-size: 22px;
+        font-size: 18px;
       }
 
       ul {
         margin-left: 5px;
-        text-transform: uppercase;
+        text-transform: capitalize;
         .menu-header {
           color: @gray-light;
           margin-top: 5px;
@@ -93,6 +124,9 @@ body {
             text-transform: capitalize;
           }
         }
+        a.current-page {
+          color: @exo-orange;
+        }
       }
     }
 
@@ -100,9 +134,8 @@ body {
       border-bottom: 5px solid @exo-blue;
       margin: 10px;
       padding: 40px;
-      color: @gray-dark;
+      color: @content-color;
       background-color: @content-background;
-      box-shadow: 5px 5px 14px 0px #333;
 
       h1 {
         text-transform: uppercase;
