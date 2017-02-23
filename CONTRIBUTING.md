@@ -37,7 +37,7 @@ Quickstarts walk users through the shortest possible way to accomplish something
 
 Guides are brief examples of how to do a single specific task, such as sending a notification (e.g., "Create a Product" - http://docs.exosite.com/guides/create-product/).
 
-### Tutorials
+### Tutorial
 
 Tutorials provide users with a complete example of how to implement a full solution from end to end by walking through real-life use cases in great detail (e.g., "HVAC Tutorial" - http://docs.exosite.com/tutorials/hvac-tutorial/).
 
