@@ -25,7 +25,25 @@ To submit a pull request in github, go to the <a href="https://github.com/exosit
 
 ## Documentation Categories
 
+### Informational Overview
 
+A page that provides a high-level overview of a subject and introduces the main components (e.g., "Welcome to Murano" - http://docs.exosite.com/).
+
+### Quickstart
+
+Quickstarts walk users through the shortest possible way to accomplish something in the format of a tutorial (e.g., "Lightbulb Quickstart" - http://docs.exosite.com/quickstarts/lightbulb/).
+
+### Guide
+
+Guides are brief examples of how to do a single specific task, such as sending a notification (e.g., "Create a Product" - http://docs.exosite.com/guides/create-product/).
+
+### Tutorials
+
+Tutorials provide users with a complete example of how to implement a full solution from end to end by walking through real-life use cases in great detail (e.g., "HVAC Tutorial" - http://docs.exosite.com/tutorials/hvac-tutorial/).
+
+### Reference
+
+Reference docs provide developers with the API, code, and other technical resources they may need to accomplish specific tasks. 
 
 ## Technical Overview
 
