@@ -5,7 +5,7 @@ template: default
 
 # Contributing to Exosite's Documentation
 
-Thanks for helping make docs better!  Check out the [Technical Overview](#technical-overview) below for information on how this doc site works and how to use the tools to contribute to it.
+Thanks for helping make docs better!  Check out the [Documentation Categories](#documentation-categories) and [Technical Overview](#technical-overview) below for information on how this doc site works and how to use the tools to contribute to it. 
 
 ## Making Small Changes
 
@@ -22,6 +22,10 @@ Before starting to make changes, get the most recent GitHub version of docs down
 Once you have made changes you are happy with locally and have committed those changes to your "my-branch-name" branch, go ahead and push the branch via "git push origin my-branch-name".  Then, in GitHub, go ahead and submit a pull request so that the documentation overlord can review your changes and determine if they are ready for prime time or not.
 
 To submit a pull request in github, go to the <a href="https://github.com/exosite/docs/pulls">Pull requests menu item</a> and click "New pull request", set base to "master" and compare to "my-branch-name" and click "Create pull request".
+
+## Documentation Categories
+
+
 
 ## Technical Overview
 
