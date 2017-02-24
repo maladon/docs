@@ -5,7 +5,7 @@ template: default
 
 # Contributing to Exosite's Documentation
 
-Thanks for helping make docs better!  Check out the [Technical Overview](#technical-overview) below for information on how this doc site works and how to use the tools to contribute to it.
+Thanks for helping make docs better!  Check out the [Documentation Categories](#documentation-categories) and [Technical Overview](#technical-overview) below for information on how this doc site works and how to use the tools to contribute to it. 
 
 ## Making Small Changes
 
@@ -22,6 +22,28 @@ Before starting to make changes, get the most recent GitHub version of docs down
 Once you have made changes you are happy with locally and have committed those changes to your "my-branch-name" branch, go ahead and push the branch via "git push origin my-branch-name".  Then, in GitHub, go ahead and submit a pull request so that the documentation overlord can review your changes and determine if they are ready for prime time or not.
 
 To submit a pull request in github, go to the <a href="https://github.com/exosite/docs/pulls">Pull requests menu item</a> and click "New pull request", set base to "master" and compare to "my-branch-name" and click "Create pull request".
+
+## Documentation Categories
+
+### Informational Overview
+
+A page that provides a high-level overview of a subject and introduces the main components (e.g., "Welcome to Murano" - http://docs.exosite.com/).
+
+### Quickstart
+
+Quickstarts walk users through the shortest possible way to accomplish something in the format of a tutorial (e.g., "Lightbulb Quickstart" - http://docs.exosite.com/quickstarts/lightbulb/).
+
+### Guide
+
+Guides are brief examples of how to do a single specific task, such as sending a notification (e.g., "Create a Product" - http://docs.exosite.com/guides/create-product/).
+
+### Tutorial
+
+Tutorials provide users with a complete example of how to implement a full solution from end to end by walking through real-life use cases in great detail (e.g., "HVAC Tutorial" - http://docs.exosite.com/tutorials/hvac-tutorial/).
+
+### Reference
+
+Reference docs provide developers with the API, code, and other technical resources they may need to accomplish specific tasks. 
 
 ## Technical Overview
 
@@ -113,3 +135,15 @@ You can also startup a local server to see your changes in the browser with
 ```
 gulp serve
 ```
+
+### Markdown Suggestions for Local vs. Github/Published Idiosyncracies
+
+* **Images**:
+ * For images you don't need to resize, use the format: `![Image Reference](/fullpath/image.png)`
+ * For images you need to resize, use the format:`<img src="/fullpath/image.png" height="200" alt="Image Reference">`
+ * You have to use the full path from the base of the docs folder (e.g. /guides/assets/imagename.png) for both your local and github to render properly (local will render with a relative path but github will not)
+ 
+* **Links that Work on https://docs.exosite.com but not on Local**
+ * Some docs are created from developer documentation.  These docs are replaced when the docs site is pushed live per https://github.com/exosite/docs/blob/master/fetch_svc_docs.sh .
+  * This includes all information, for example, under /reference/services
+
